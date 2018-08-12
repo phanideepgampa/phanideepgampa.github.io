@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Explorer, Math Lover, Movie buff, Gaming, Travel Freak.  
+#### Academia:
+Integrated Dual Degree
 
-### More Information
+Maths and Computing
 
-A place to include any other types of information that you'd like to include about yourself.
+Indian Institute of Technology (B.H.U) Varanasi
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[phani1998@gmail.com](mailto:phani1998@gmail.com)
