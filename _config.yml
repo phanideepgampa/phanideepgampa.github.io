@@ -18,12 +18,12 @@ avatar: https://avatars3.githubusercontent.com/u/4285772?s=400&u=b9d1cb44aa5c12c
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: phani1998@gmail.com
   facebook:
   flickr:
-  github: 
+  github: https://github.com/phanideepgampa 
   instagram:
-  linkedin:
+  linkedin: https://www.linkedin.com/in/phanideep-gampa-854474132/
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: 
@@ -34,10 +34,10 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus:
+disqus: phanideepgampa
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-128247057-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed

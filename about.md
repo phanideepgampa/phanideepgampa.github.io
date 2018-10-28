@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Explorer, Math Lover, Movie buff, Gaming, Travel Freak.  
-#### Academia:
-Integrated Dual Degree
-
-Maths and Computing
-
+A Philomath !!  
+AI, Data, Probability..   
+Coding, Movies, Gaming, Travel...  
+Always Exploring.  
+### Academia
+Integrated Dual Degree  
+Maths and Computing  
 Indian Institute of Technology (B.H.U) Varanasi
 
 ### Contact me
