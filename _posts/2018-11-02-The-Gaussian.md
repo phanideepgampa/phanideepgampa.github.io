@@ -3,7 +3,7 @@ layout: post
 title: The Gaussian!!
 ---
 
-## The trivial intro :sweat_smile:
+## The Trivial Intro :sweat_smile:
 The Gaussian distribution is one of the most widely used continuous distribution with applications in many fields.It has several other names like ***normal distribution,bell curve***.The density function with mean $$\mu$$ and variance $$\sigma^2$$ is given by \$$ f(x\vert \mu,\sigma^2)= \frac{1}{\sqrt{2\pi \sigma^2}}\exp^{\frac{-(x-\mu)^2}{2\sigma^2}} $$
 
 ![Gaussian]({{ site.baseurl }}/images/{{page.title}}_1.png            "Gaussian")
@@ -22,18 +22,18 @@ We'll go through the theorem using an interactive simulation for making it easy 
 So,when we are trying to estimate the mean of an unknown distribution through repeated sampling.CLT says that the probability distribution of the mean estimate tends to normal distribution as the sample size increases.This is true even-though the unknown distribution is not a normal distribution with the only condition that the ***variance*** of the unknown distribution should be ***finite***.
 
 ### Live Example
-For example,let us take a population distribution as given below.The below shown population consists of 100,000 numbers out of which half are sampled from exponential distribution(parameter=1) and the other half from the normal distribution(mean=25,variance=5) 
+For example, let us take a population distribution as given below. The below-shown population consists of 100,000 numbers out of which half are sampled from the exponential distribution(parameter=1) and the other half from the normal distribution(mean=25,variance=5) 
 
 ![Population]({{ site.baseurl }}/images/{{page.title}}_2.png            "Population")
 
-Now given a sample size ***s*** and number of trials ***t***,we sample(with replacement) s numbers from the population for t times.Mean of the samples for each time is recorded.This would be the sampling distribution of the mean of the population.The below code makes the things clear
+Now given a sample size ***s*** and the number of trials ***t***, we sample(with replacement) s numbers from the population for t times. Mean of the samples for each time is recorded. This would be the sampling distribution of the mean of the population. The below code makes the things clear
 
 {% highlight python %}
 
 sample_sizes=[1,100,150,200,250]
 trials=[100,500,2000]
 data={}
-for s in tqdm.tqdm(sample_sizes):
+for s in sample_sizes:
     for t in trials:
         mean=[]
         for k in range(t):
@@ -43,7 +43,7 @@ for s in tqdm.tqdm(sample_sizes):
 
 {% endhighlight %}
 
-Given below is an interactive plot of each setting.We can observe that as the sample size increases with significant number of trials,the sampling distribution of the population mean estimate approaches normal.
+Given below is an interactive plot of each setting. We can observe that as the sample size increases and if the number of trials are significant, the sampling distribution of the population mean estimate approaches the normal distribution.
 
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~phanideep_gampa/4.embed?link=false"></iframe>
 
