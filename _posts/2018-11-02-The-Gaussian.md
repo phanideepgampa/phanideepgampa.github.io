@@ -45,8 +45,8 @@ for s in sample_sizes:
 
 Given below is an interactive plot of each setting. We can observe that as the sample size increases and if the number of trials are significant, the sampling distribution of the population mean estimate approaches the normal distribution.
 
-<div class="embed-responsive embed-responsive-4by3">
-<iframe class="embed-responsive-item" frameborder="0" scrolling="no" src="//plot.ly/~phanideep_gampa/4.embed?link=false"></iframe>
+<div class="embed-responsive embed-responsive-1by1">
+<iframe class="embed-responsive-item"  src="//plot.ly/~phanideep_gampa/4.embed?link=false&autosize=true&logo=false"></iframe>
 </div>
 
 
