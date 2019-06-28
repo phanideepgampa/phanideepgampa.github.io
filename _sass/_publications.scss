@@ -40,7 +40,7 @@
                 font-style: normal;
             }
         }
-        a.abstract, a.bibtex { cursor: pointer; color: red ; }
+        a.abstract, a.bibtex { cursor: pointer; color: $theme-color  ; }
         .hidden {
             font-size: $small-font-size;
             max-height: 0px;
