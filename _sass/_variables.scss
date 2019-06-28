@@ -3,6 +3,8 @@
 // VARIABLES
 //
 
+$small-font-size:  0.875rem !default;
+
 // Colors
 $blue: #4183C4;
 
@@ -11,13 +13,21 @@ $black: #000;
 $darkerGray: #222;
 $darkGray: #333;
 $gray: #666;
-$lightGray: #eee;
+$lightGray: #ccc;
 $white: #fff;
+$purple:            #B509AC !default;
 
+$background-color:  white;
+$theme-color:       $purple;
+$text-color:        $gray;
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
+
+// Links
+$link-color:        $theme-color;
+$link-hover-color:  darken($theme-color, 40%);
 
 // Mobile breakpoints
 @mixin mobile {

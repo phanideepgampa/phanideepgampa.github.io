@@ -24,6 +24,9 @@
       });
       </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- Load Common JS -->
+      <script src="{{ '/assets/js/common.js' | prepend: site.baseurl | prepend: site.url }}"></script>
     {% seo %}
   </head>
 
@@ -44,6 +47,9 @@
             <li class="nav-item">
               <a class="nav-link active" href="{{ site.baseurl }}/">Blog</a>
             </li >
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ site.baseurl }}/publications">Publications</a>
+              </li>
             <li class="nav-item">
             <a class="nav-link active" href="{{ site.baseurl }}/about">About</a>
             </li>

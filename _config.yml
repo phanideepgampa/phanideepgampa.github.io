@@ -83,6 +83,7 @@ plugins:
   - jemoji
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-scholar
 # Exclude these files from your production _site
 exclude:
   - Gemfile
@@ -90,3 +91,27 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+# Jekyll-Scholar
+scholar:
+
+  last_name: Gampa
+
+  style: apa
+  locale: en
+
+  sort_by: year
+  order: descending
+
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
+
+  query: "@*"

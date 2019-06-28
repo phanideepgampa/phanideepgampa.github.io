@@ -1,0 +1,24 @@
+a {
+    color: $theme-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $theme-color;
+        text-decoration: none;
+    }
+}
+
+article a, .news a {
+    color: $theme-color;
+    font-weight: 100;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.social a {
+    color: $text-color;
+
+    &:hover { color: $theme-color; }
+}
