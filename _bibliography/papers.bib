@@ -26,3 +26,10 @@ Finally,we give some simple experiments to validate our propositions.
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 
+@ARTICLE{banditrank,
+       author = {{Gampa}, Phanideep and
+         {Fujita}, Sumio},
+        title = "{BanditRank:Learning To Rank Using Contextual Bandits}",
+      journal = {Yet to be submitted for WSDM'20 Conference},
+      abstract = {In this paper, we propose a novel extensible deep learning framework which uses reinforcement learning for ranking in retrieval tasks. We name our approach BanditRank as it treats ranking as a contextual bandit problem. In the domain of learning to rank for Information Retrieval (IR), the proposed  deep learning models till now  are trained on objective functions different from the metrics they're evaluated on. Since most of the evaluation metrics are discrete quantities, they cannot be leveraged by the Gradient Descent algorithms directly without an approximation. The proposed framework bridges this gap by directly optimizing the  task specific score such as Mean Average Precision (MAP) using gradient descent. Specifically, we propose a framework in which a contextual bandit whose action is to rank input documents is trained using policy gradient algorithm to directly maximize the reward. The reward can be a single metric like MAP or combination of several metrics. Also, the notion of ranking is inherent in the proposed framework similar to the existing  \textit{listwise} frameworks. To prove the effectiveness of BanditRank, we conduct a series of experiments on several  datasets in the domain of web search and question answering. We demonstrate that it achieves results better than the  state-of-the-art models when applied on the question answering datasets. On the web search dataset, we demonstrate that BanditRank achieves better result than the four strong listwise baselines used.},
+      year = 2020 }
