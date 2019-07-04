@@ -194,7 +194,8 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  //color: $darkGray;
+  color: $theme-color;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -205,6 +206,7 @@ img {
 .site-description {
   margin: -5px 0 0 0;
   color: $black;
+  //color: $theme-color;
   font-size: 16px;
 
   @include mobile {
@@ -325,7 +327,9 @@ footer {
 
 //navigation buttons
 .nav-pills a.nav-link.active, .nav-pills .show>.nav-link{
-  color: #343a40;
+  //color: #343a40;
+  color: $theme-color;
   background-color: #93a1a1b8;
+  //background-color: $theme-color;
 }
 @import "links";
