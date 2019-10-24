@@ -26,10 +26,24 @@ Finally,we give some simple experiments to validate our propositions.
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 
-@ARTICLE{banditrank,
-       author = {{Gampa}, Phanideep and
-         {Fujita}, Sumio},
-        title = "{Learning To Rank Using Bandits}",
-      journal = {Under Review},
-      abstract = {In this paper, we propose a novel extensible deep learning framework which uses reinforcement learning for ranking in retrieval tasks.Our approach formulates ranking as a contextual bandit problem. In the domain of learning to rank for Information Retrieval (IR), since most of the evaluation metrics are discrete quantities, they cannot be leveraged by the Gradient Descent algorithms directly without an approximation. The proposed method bridges this gap by directly optimizing the  task specific score such as Mean Average Precision (MAP) using gradient descent. Specifically, we propose a method in which a contextual bandit whose action is to rank input documents is trained using policy gradient algorithm to directly maximize the reward. To prove the effectiveness of proposed method, we conduct a series of experiments on several datasets in the domain of web search and question answering. We demonstrate that it achieves results better than the  state-of-the-art models when applied on the question answering datasets. On the web search dataset, we demonstrate that the proposed method achieves better result than the four strong listwise baselines used.},
-      year = 2020 }
+
+@ARTICLE{2019arXiv191010410G,
+       author = {{Gampa}, Phanideep and {Fujita}, Sumio},
+        title = "{BanditRank: Learning to Rank Using Contextual Bandits}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Information Retrieval, Computer Science - Machine Learning},
+         year = "2019",
+        month = "Oct",
+        arxiv = "1910.10410",
+          eid = {arXiv:1910.10410},
+        pages = {arXiv:1910.10410},
+archivePrefix = {arXiv},
+       eprint = {1910.10410},
+ primaryClass = {cs.IR},
+      abstract = {We propose an extensible deep learning method that uses reinforcement learning to train neural networks for offline ranking in information retrieval (IR). We call our method BanditRank as it treats ranking as a contextual bandit problem. In the domain of learning to rank for IR, current deep learning models are trained on objective functions different from the measures they are evaluated on. Since most evaluation measures are discrete quantities, they cannot be leveraged by directly using gradient descent algorithms without an approximation. BanditRank bridges this gap by directly optimizing a task-specific measure, such as mean average precision (MAP), using gradient descent. Specifically, a contextual bandit whose action is to rank input documents is trained using a policy gradient algorithm to directly maximize the reward. The reward can be a single measure, such as MAP, or a combination of several measures. The notion of ranking is also inherent in BanditRank, similar to the current \textit{listwise} approaches. To evaluate the effectiveness of BanditRank, we conducted a series of experiments on datasets related to three different tasks, i.e., web search, community, and factoid question answering. We found that it performs better than state-of-the-art methods when applied on the question answering datasets. On the web search dataset, we found that BanditRank performed better than four strong listwise baselines including LambdaMART, AdaRank, ListNet and Coordinate Ascent.},
+      code = {https://github.com/phanideepgampa/learning-to-rank},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2019arXiv191010410G},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
