@@ -46,4 +46,14 @@ archivePrefix = {arXiv},
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 
-
+@misc{goyal2020object,
+    title={Object Files and Schemata: Factorizing Declarative and Procedural Knowledge in Dynamical Systems},
+    author={Anirudh {Goyal} and Alex {Lamb} and Phanideep {Gampa} and Philippe {Beaudoin} and Sergey {Levine} and Charles {Blundell} and Yoshua {Bengio} and Michael {Mozer}},
+    year={2020},
+    eprint={2006.16225},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG},
+    abstract={Modeling a structured, dynamic environment like a video game requires keeping track of the objects and their states (\emph{declarative} knowledge) as well as predicting how objects behave (\emph{procedural} knowledge). Black-box models with a monolithic hidden state often lack \emph{systematicity}: they fail to apply procedural knowledge consistently and uniformly. For example, in a video game, correct prediction of one enemy's trajectory does not ensure correct prediction of another's. We address this issue via an architecture that factorizes declarative and procedural knowledge and that imposes modularity within each form of knowledge. The architecture consists of active modules called \emph{object files} that maintain the state of a single object and invoke passive external knowledge sources called \emph{schemata} that prescribe state updates. To use a video game as an illustration, two enemies of the same type will share schemata but will each have their own object file to encode their distinct state (e.g., health, position). We propose to use attention to control the determination of which object files to update, the selection of schemata, and the propagation of information between object files. The resulting architecture is a drop-in replacement conforming to the same input-output interface as normal recurrent networks (e.g., LSTM, GRU) yet achieves substantially better generalization on environments that have factorized declarative and procedural knowledge, including a challenging intuitive physics benchmark},
+    journal = {arXiv e-prints},
+    arxiv = "2006.16225",
+}
