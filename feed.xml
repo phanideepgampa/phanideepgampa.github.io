@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://phanideepgampa.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://phanideepgampa.github.io//" rel="alternate" type="text/html" /><updated>2020-07-03T19:11:06+05:30</updated><id>https://phanideepgampa.github.io//feed.xml</id><title type="html">Phanideep Gampa</title><subtitle>Final Year Dual Degree student from IIT (B.H.U) Varanasi</subtitle><entry><title type="html">The Gaussian!!</title><link href="https://phanideepgampa.github.io//The-Gaussian/" rel="alternate" type="text/html" title="The Gaussian!!" /><published>2018-11-02T00:00:00+05:30</published><updated>2018-11-02T00:00:00+05:30</updated><id>https://phanideepgampa.github.io//The-Gaussian</id><content type="html" xml:base="https://phanideepgampa.github.io//The-Gaussian/">&lt;h2 id=&quot;the-trivial-intro-sweat_smile&quot;&gt;The Trivial Intro :sweat_smile:&lt;/h2&gt;
+&lt;p&gt;The Gaussian distribution is one of the most widely used continuous distribution with applications in many fields. It has several other names like &lt;strong&gt;&lt;em&gt;normal distribution, bell curve&lt;/em&gt;&lt;/strong&gt;. The density function with mean &lt;script type=&quot;math/tex&quot;&gt;\mu&lt;/script&gt; and variance &lt;script type=&quot;math/tex&quot;&gt;\sigma^2&lt;/script&gt; is given by: $$ f(x\vert \mu,\sigma^2)= \frac{1}{\sqrt{2\pi \sigma^2}}\exp^{\frac{-(x-\mu)^2}{2\sigma^2}} $$&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/The Gaussian!!_1.png&quot; alt=&quot;Gaussian&quot; title=&quot;Gaussian&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;the-chronicles-of-gaussian-laughing-sweat_smile&quot;&gt;The Chronicles of Gaussian :laughing: :sweat_smile:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Abraham de Moivre, an 18th-century statistician and consultant to gamblers, first discovered this distribution as an approximation to the binomial distribution. He observed that binomial distribution with a large number of trials approached a symmetric curve which he named it as &lt;strong&gt;&lt;em&gt;normal curve&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;One of the first applications to normal distributions was made by Galileo for errors in astronomical observations. He observed that the errors were symmetric and that small errors occurred more frequently than large errors (distributions of many natural phenomena are at least approximately normally distributed).&lt;/li&gt;
+  &lt;li&gt;Later in the 18th century, Adrain and Gauss Independently developed the formula for the normal distribution and showed that errors were fit well by this distribution.&lt;/li&gt;
+  &lt;li&gt;The same distribution was discovered by Laplace when he derived the &lt;strong&gt;&lt;em&gt;Central Limit Theorem&lt;/em&gt;&lt;/strong&gt; which is considered to be one of the most important results in the theory of probability.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-central-limit-theorem-the-selling-point-of-gaussian-wink&quot;&gt;The Central Limit Theorem (The selling point of Gaussian :wink:)&lt;/h2&gt;
+&lt;p&gt;In most of the stochastic or random models, &lt;strong&gt;&lt;em&gt;mean/expectation&lt;/em&gt;&lt;/strong&gt; is involved in one or the other ways. This is because, mean is the primary choice (others include median, mode) for a central measure of a distribution. The Central limit theorem connects the mean of any unknown distribution to the Gaussian.&lt;/p&gt;
+
+&lt;p&gt;We’ll go through the theorem using an interactive simulation for making it easy to grasp. First, we’ll look at the theorem statement in simple terms according to Wiki:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;In probability theory, the central limit theorem (CLT) establishes that, in some situations, when independent random variables are added, their properly normalized sum tends toward a normal distribution (informally a “bell curve”) even if the original variables themselves are not normally distributed. The theorem is a key (“central”) concept in probability theory because it implies that probabilistic and statistical methods that work for normal distributions can be applicable to many problems involving other types of distributions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, when we are trying to estimate the mean of an unknown distribution through repeated sampling. CLT says that the probability distribution of the mean estimate tends to normal distribution as the sample size increases. This is true even-though the unknown distribution is not a normal distribution with the only condition that the &lt;strong&gt;&lt;em&gt;variance&lt;/em&gt;&lt;/strong&gt; of the unknown distribution should be &lt;strong&gt;&lt;em&gt;finite&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;live-example&quot;&gt;Live Example&lt;/h3&gt;
+&lt;p&gt;For example, let us take a population distribution as given below. The below-shown population consists of 100,000 numbers out of which half are sampled from the exponential distribution(parameter=1) and the other half from the normal distribution(mean=25,variance=5)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/The Gaussian!!_2.png&quot; alt=&quot;Population&quot; title=&quot;Population&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now given a sample size &lt;strong&gt;&lt;em&gt;s&lt;/em&gt;&lt;/strong&gt; and the number of trials &lt;strong&gt;&lt;em&gt;t&lt;/em&gt;&lt;/strong&gt;, we sample (with replacement) s numbers from the population for t times. Mean of the samples for each time is recorded. This would be the sampling distribution of the mean of the population. The below code makes the things clear:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;sample_sizes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;250&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;trials&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sample_sizes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;population&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'_'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Given below is an interactive plot of each setting. We can observe that as the sample size increases and if the number of trials are significant, the sampling distribution of the population mean estimate approaches the normal distribution.&lt;/p&gt;
+
+&lt;div class=&quot;embed-responsive embed-responsive-1by1&quot;&gt;
+&lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;//plot.ly/~phanideep_gampa/4.embed?link=false&amp;amp;autosize=true&amp;amp;logo=false&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">The Trivial Intro :sweat_smile: The Gaussian distribution is one of the most widely used continuous distribution with applications in many fields. It has several other names like normal distribution, bell curve. The density function with mean and variance is given by: $$ f(x\vert \mu,\sigma^2)= \frac{1}{\sqrt{2\pi \sigma^2}}\exp^{\frac{-(x-\mu)^2}{2\sigma^2}} $$</summary></entry><entry><title type="html">Probabilistic Inference!!!</title><link href="https://phanideepgampa.github.io//Probabilistic-Inference!!!/" rel="alternate" type="text/html" title="Probabilistic Inference!!!" /><published>2018-08-12T00:00:00+05:30</published><updated>2018-08-12T00:00:00+05:30</updated><id>https://phanideepgampa.github.io//Probabilistic%20Inference!!!</id><content type="html" xml:base="https://phanideepgampa.github.io//Probabilistic-Inference!!!/">&lt;p&gt;Assume we are given some dataset X with n features or variables and N number of data points. Letters in bold (&lt;strong&gt;x&lt;/strong&gt;) denote vectors and the others are scalars.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;This post considers only the approximate inference algorithms that are based on optimization.This is only an overview of such algorithms.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;learning-the-model-of-the-data&quot;&gt;Learning the model of the data&lt;/h2&gt;
+
+&lt;p&gt;Learning involves estimating the underlying data distribution &lt;script type=&quot;math/tex&quot;&gt;p(\bf x)&lt;/script&gt;.We assume the observed variable &lt;strong&gt;x&lt;/strong&gt; is a random sample from an unknown underlying process, whose true distribution is unknown. We try to approximate the underlying process with a chosen model &lt;script type=&quot;math/tex&quot;&gt;p_{\theta}(\bf x)&lt;/script&gt; with parameter &lt;script type=&quot;math/tex&quot;&gt;\theta&lt;/script&gt;. So, learning implies learning the parameter &lt;script type=&quot;math/tex&quot;&gt;\theta&lt;/script&gt;.&lt;script type=&quot;math/tex&quot;&gt;p_{\theta}(\bf x)&lt;/script&gt; should be sufficiently flexible to be able to adapt to the data. Let &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt; denote the parameter space.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Probabilistic Inference!!!_1.png&quot; alt=&quot;Learning&quot; title=&quot;Learning&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Two of the most commonly used models are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;AutoRegressive Models (Pixel CNN, Character RNN)&lt;/li&gt;
+  &lt;li&gt;Latent Variable Models (VAE, Normalizing flow models, GAN, Inverse Autoregressive Flows)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The optimization criteria for models may be Maximum Likelihood or ELBO (Evidence Lower Bound which is a lower bound of likelihood) depending on the tractability of the likelihood of a model. Both the criteria are outcomes of Kullback-Leibler Divergence and are likelihood based. Generative adversarial networks come under latent variable models but the optimization criteria here is likelihood-free.&lt;/p&gt;
+&lt;h2 id=&quot;autoregressive-models&quot;&gt;AutoRegressive Models&lt;/h2&gt;
+&lt;p&gt;These models assume some topological ordering of the variables of the data. Based on the ordering,the distribution &lt;script type=&quot;math/tex&quot;&gt;p_{\theta}(\bf x)&lt;/script&gt; is factorized into product of conditionals. Each conditional can be parameterized separately.Let &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\bf x_{&lt; i} %]]&gt;&lt;/script&gt; denote variables till &lt;strong&gt;i&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;(x_1,x_2,\dots,x_{i-1})&lt;/script&gt;. If the order is assumed as sequential,then the model is factorized as $$p_{\theta}(\bf x)=\Pi_{i=1}^{n}p_{\theta}(x_i\vert \bf x_{&amp;lt; i})$$&lt;/p&gt;
+
+&lt;p&gt;For example consider the case of MNIST dataset. Each image can be considered as a 784 dimensional vector unrolled from left to right and top to bottom. AutoRegressive models can be used to generate one pixel based on the previously generated pixels (sequential ordering assumption).&lt;/p&gt;
+
+&lt;h2 id=&quot;latent-variable-models&quot;&gt;Latent Variable Models&lt;/h2&gt;
+
+&lt;p&gt;Latent variables are variables that are part of the model, but which we don’t observe. Latent variables are denoted by &lt;strong&gt;z&lt;/strong&gt; and the model would then become &lt;script type=&quot;math/tex&quot;&gt;p_{\theta}(\bf x,\bf z)&lt;/script&gt;. If the distributions are parameterized by neural networks, they are called Deep Latent Variable Models(DLVM).&lt;/p&gt;
+
+&lt;h3 id=&quot;advantage-of-z&quot;&gt;Advantage of &lt;strong&gt;z&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;The marginal distribution over the datapoints &lt;script type=&quot;math/tex&quot;&gt;p_{\theta}(\bf x)&lt;/script&gt; is given by $$p_{\theta}(\bf{x}) = \int p_{\theta}(\bf x,\bf z)dz $$&lt;/p&gt;
+
+&lt;p&gt;This implicit distribution over &lt;strong&gt;x&lt;/strong&gt; can be quite flexible. If &lt;strong&gt;z&lt;/strong&gt; is discrete and &lt;script type=&quot;math/tex&quot;&gt;p_{\theta}(\bf{x} \vert \bf{z})&lt;/script&gt; is a Gaussian distribution,then &lt;script type=&quot;math/tex&quot;&gt;p_{\theta}(\bf x)&lt;/script&gt; is a mixture of Gaussian distributions. For continuous &lt;strong&gt;z&lt;/strong&gt;, it can be seen as an infinite mixture of Gaussian distributions. The simplest and most common latent variable model is factorized as $$p_{\theta}(\bf{x}, \bf{z}) = p_{\theta}(\bf{z})p_{\theta}(\bf{x} \vert \bf{z}) $$&lt;/p&gt;
+
+&lt;p&gt;The distribution &lt;script type=&quot;math/tex&quot;&gt;p(\bf{z})&lt;/script&gt; is called as prior distribution over &lt;strong&gt;z&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-on-the-tractability-of-likelihood&quot;&gt;Comments on the tractability of Likelihood&lt;/h2&gt;
+&lt;p&gt;Learning the parameters requires the computation of likelihood for maximum likelihood learning. Gradient Descent algorithms are then used for finding the parameters that maximize the likelihood.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Autoregressive models provide tractable likelihoods but no direct mechanism for learning features. They doesn’t learn any hidden representations or features like the latent variable models.&lt;/li&gt;
+  &lt;li&gt;Latent variable models can learn feature representations (via latent variables &lt;strong&gt;z&lt;/strong&gt;) but have intractable marginal likelihoods because of the integral which is difficult to evaluate.
+    &lt;blockquote&gt;
+      &lt;p&gt;Thats the reason why VAE’s approximate the posterior distribution &lt;script type=&quot;math/tex&quot;&gt;p_{\theta}(\bf{z} \vert \bf{x})&lt;/script&gt; and use ELBO which is a lower bound on the log-likelihood as the optimization criteria.GAN’s on the other hand don’t use likelihood as a criterion for optimization(doesn’t depend on likelihood directly).&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Latent Variable models that consists of flows like Normalizing Flow models have tractable likelihoods.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Assume we are given some dataset X with n features or variables and N number of data points. Letters in bold (x) denote vectors and the others are scalars. This post considers only the approximate inference algorithms that are based on optimization.This is only an overview of such algorithms.</summary></entry></feed>

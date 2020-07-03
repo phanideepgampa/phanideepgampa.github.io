@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Probabilistic Inference!!! – Phanideep Gampa – Final Year Dual Degree student from IIT (B.H.U) Varanasi</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no'>
+
+    
+    <meta name="description" content="Assume we are given some dataset X with n features or variables and N number of data points. Letters in bold (x) denote vectors and the others are scalars.
+
+  This post considers only the approximate inference algorithms that are based on optimization.This is only an overview of such algorithms.
+
+
+" />
+    <meta property="og:description" content="Assume we are given some dataset X with n features or variables and N number of data points. Letters in bold (x) denote vectors and the others are scalars.
+
+  This post considers only the approximate inference algorithms that are based on optimization.This is only an overview of such algorithms.
+
+
+" />
+    
+    <meta name="author" content="Phanideep Gampa" />
+
+    
+    <meta property="og:title" content="Probabilistic Inference!!!" />
+    <meta property="twitter:title" content="Probabilistic Inference!!!" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Phanideep Gampa - Final Year Dual Degree student from IIT (B.H.U) Varanasi" href="/feed.xml" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+        <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+      });
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- Load Common JS -->
+      <!-- <script src="https://phanideepgampa.github.io/assets/js/common.js"></script> -->
+      <script src="https://phanideepgampa.github.io/assets/js/common.js"></script>
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Probabilistic Inference!!! | Phanideep Gampa</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Probabilistic Inference!!!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Assume we are given some dataset X with n features or variables and N number of data points. Letters in bold (x) denote vectors and the others are scalars. This post considers only the approximate inference algorithms that are based on optimization.This is only an overview of such algorithms." />
+<meta property="og:description" content="Assume we are given some dataset X with n features or variables and N number of data points. Letters in bold (x) denote vectors and the others are scalars. This post considers only the approximate inference algorithms that are based on optimization.This is only an overview of such algorithms." />
+<link rel="canonical" href="https://phanideepgampa.github.io//Probabilistic-Inference!!!/" />
+<meta property="og:url" content="https://phanideepgampa.github.io//Probabilistic-Inference!!!/" />
+<meta property="og:site_name" content="Phanideep Gampa" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-12T00:00:00+05:30" />
+<script type="application/ld+json">
+{"description":"Assume we are given some dataset X with n features or variables and N number of data points. Letters in bold (x) denote vectors and the others are scalars. This post considers only the approximate inference algorithms that are based on optimization.This is only an overview of such algorithms.","@type":"BlogPosting","url":"https://phanideepgampa.github.io//Probabilistic-Inference!!!/","headline":"Probabilistic Inference!!!","dateModified":"2018-08-12T00:00:00+05:30","datePublished":"2018-08-12T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://phanideepgampa.github.io//Probabilistic-Inference!!!/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <div class="background"></div>
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://avatars3.githubusercontent.com/u/4285772?s=400&u=b9d1cb44aa5c12c804e7794afdefee569a0be61c&v=4" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Phanideep Gampa</a></h1>
+            <p class="site-description">Final Year Dual Degree student from IIT (B.H.U) Varanasi</p>
+          </div>
+
+          <nav>
+            <ul class="nav nav-pills">
+            <li class="nav-item">
+                    <a class="nav-link active" href="/">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/publications">Publications</a>
+                </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/blog">Blog</a>
+            </li >
+
+
+            </ul>
+
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>Probabilistic Inference!!!</h1>
+
+  <div class="entry">
+    <p>Assume we are given some dataset X with n features or variables and N number of data points. Letters in bold (<strong>x</strong>) denote vectors and the others are scalars.</p>
+<blockquote>
+  <p>This post considers only the approximate inference algorithms that are based on optimization.This is only an overview of such algorithms.</p>
+</blockquote>
+
+<h2 id="learning-the-model-of-the-data">Learning the model of the data</h2>
+
+<p>Learning involves estimating the underlying data distribution <script type="math/tex">p(\bf x)</script>.We assume the observed variable <strong>x</strong> is a random sample from an unknown underlying process, whose true distribution is unknown. We try to approximate the underlying process with a chosen model <script type="math/tex">p_{\theta}(\bf x)</script> with parameter <script type="math/tex">\theta</script>. So, learning implies learning the parameter <script type="math/tex">\theta</script>.<script type="math/tex">p_{\theta}(\bf x)</script> should be sufficiently flexible to be able to adapt to the data. Let <script type="math/tex">M</script> denote the parameter space.</p>
+
+<p><img src="/images/Probabilistic Inference!!!_1.png" alt="Learning" title="Learning" /></p>
+
+<p>Two of the most commonly used models are:</p>
+<ul>
+  <li>AutoRegressive Models (Pixel CNN, Character RNN)</li>
+  <li>Latent Variable Models (VAE, Normalizing flow models, GAN, Inverse Autoregressive Flows)</li>
+</ul>
+
+<p>The optimization criteria for models may be Maximum Likelihood or ELBO (Evidence Lower Bound which is a lower bound of likelihood) depending on the tractability of the likelihood of a model. Both the criteria are outcomes of Kullback-Leibler Divergence and are likelihood based. Generative adversarial networks come under latent variable models but the optimization criteria here is likelihood-free.</p>
+<h2 id="autoregressive-models">AutoRegressive Models</h2>
+<p>These models assume some topological ordering of the variables of the data. Based on the ordering,the distribution <script type="math/tex">p_{\theta}(\bf x)</script> is factorized into product of conditionals. Each conditional can be parameterized separately.Let <script type="math/tex">% <![CDATA[
+\bf x_{< i} %]]></script> denote variables till <strong>i</strong> <script type="math/tex">(x_1,x_2,\dots,x_{i-1})</script>. If the order is assumed as sequential,then the model is factorized as $$p_{\theta}(\bf x)=\Pi_{i=1}^{n}p_{\theta}(x_i\vert \bf x_{&lt; i})$$</p>
+
+<p>For example consider the case of MNIST dataset. Each image can be considered as a 784 dimensional vector unrolled from left to right and top to bottom. AutoRegressive models can be used to generate one pixel based on the previously generated pixels (sequential ordering assumption).</p>
+
+<h2 id="latent-variable-models">Latent Variable Models</h2>
+
+<p>Latent variables are variables that are part of the model, but which we don’t observe. Latent variables are denoted by <strong>z</strong> and the model would then become <script type="math/tex">p_{\theta}(\bf x,\bf z)</script>. If the distributions are parameterized by neural networks, they are called Deep Latent Variable Models(DLVM).</p>
+
+<h3 id="advantage-of-z">Advantage of <strong>z</strong></h3>
+
+<p>The marginal distribution over the datapoints <script type="math/tex">p_{\theta}(\bf x)</script> is given by $$p_{\theta}(\bf{x}) = \int p_{\theta}(\bf x,\bf z)dz $$</p>
+
+<p>This implicit distribution over <strong>x</strong> can be quite flexible. If <strong>z</strong> is discrete and <script type="math/tex">p_{\theta}(\bf{x} \vert \bf{z})</script> is a Gaussian distribution,then <script type="math/tex">p_{\theta}(\bf x)</script> is a mixture of Gaussian distributions. For continuous <strong>z</strong>, it can be seen as an infinite mixture of Gaussian distributions. The simplest and most common latent variable model is factorized as $$p_{\theta}(\bf{x}, \bf{z}) = p_{\theta}(\bf{z})p_{\theta}(\bf{x} \vert \bf{z}) $$</p>
+
+<p>The distribution <script type="math/tex">p(\bf{z})</script> is called as prior distribution over <strong>z</strong>.</p>
+
+<h2 id="comments-on-the-tractability-of-likelihood">Comments on the tractability of Likelihood</h2>
+<p>Learning the parameters requires the computation of likelihood for maximum likelihood learning. Gradient Descent algorithms are then used for finding the parameters that maximize the likelihood.</p>
+<ul>
+  <li>Autoregressive models provide tractable likelihoods but no direct mechanism for learning features. They doesn’t learn any hidden representations or features like the latent variable models.</li>
+  <li>Latent variable models can learn feature representations (via latent variables <strong>z</strong>) but have intractable marginal likelihoods because of the integral which is difficult to evaluate.
+    <blockquote>
+      <p>Thats the reason why VAE’s approximate the posterior distribution <script type="math/tex">p_{\theta}(\bf{z} \vert \bf{x})</script> and use ELBO which is a lower bound on the log-likelihood as the optimization criteria.GAN’s on the other hand don’t use likelihood as a criterion for optimization(doesn’t depend on likelihood directly).</p>
+    </blockquote>
+  </li>
+  <li>Latent Variable models that consists of flows like Normalizing Flow models have tractable likelihoods.</li>
+</ul>
+
+  </div>
+
+  <div class="date">
+    <br>
+    Written on August 12, 2018
+  </div>
+
+  
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'phanideepgampa';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:phani1998@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/phanideepgampa"><i class="svg-icon github"></i></a>
+
+<a href="https://www.linkedin.com/in/phanideep-gampa-854474132/"><i class="svg-icon linkedin"></i></a>
+
+<a href="/feed.xml"><i class="svg-icon rss"></i></a>
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-128247057-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/Probabilistic-Inference!!!/',
+		  'title': 'Probabilistic Inference!!!'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+  </body>
+</html>
